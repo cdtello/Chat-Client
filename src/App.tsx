@@ -9,10 +9,13 @@ const App = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [members, setMembers] = useState([]);
   const [chatRows, setChatRows] = useState<React.ReactNode[]>([]);
+  const [name, setName] = useState('');
+  
 
   const onSocketOpen = useCallback(() => {
     setIsConnected(true);
-    const name = prompt('Enter your name');
+    const name = `User ${'ABCDEFGHI'.charAt(Math.floor(Math.random() *  9))}`;
+    setName(name);
     socket.current?.send(JSON.stringify({ action: 'setName', name }));
   }, []);
 
@@ -61,12 +64,17 @@ const App = () => {
     }));
   }, []);
 
-  const onSendPublicMessage = useCallback(() => {
-    const message = prompt('Enter public message');
-    socket.current?.send(JSON.stringify({
-      action: 'sendPublic',
-      message,
-    }));
+  const onSendPublicMessage = useCallback((e) => {
+    const message: string = e.target.value;
+    if(message.trim().length){
+      e.target.value = "";
+      socket.current?.send(JSON.stringify({
+        action: 'sendPublic',
+        message,
+      }));
+    }
+  
+    
   }, []);
 
   const onDisconnect = useCallback(() => {
@@ -76,6 +84,7 @@ const App = () => {
   }, [isConnected]);
 
   return <ChatClient
+    userName = {name}
     isConnected={isConnected}
     members={members}
     chatRows={chatRows}

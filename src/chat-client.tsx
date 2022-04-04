@@ -8,16 +8,19 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Paper from '@material-ui/core/Paper';
 
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 interface Props {
   isConnected: boolean;
   members: string[];
   chatRows: React.ReactNode[];
-  onPublicMessage: () => void;
+  userName: string;
+  onPublicMessage: (e: object) => void;
   onPrivateMessage: (to: string) => void;
   onConnect: () => void;
   onDisconnect: () => void;
 }
-
 export const ChatClient = (props: Props) => {
   return (
     <div style={{
@@ -34,7 +37,9 @@ export const ChatClient = (props: Props) => {
           <Grid item xs={2} style={{ backgroundColor: '#3e103f', color: 'white' }}>
             <List component="nav">
               {props.members.map(item =>
-                <ListItem key={item} onClick={() => { props.onPrivateMessage(item); }} button>
+                <ListItem key={item} 
+                //onClick={() => { props.onPrivateMessage(item); }} button
+                >
                   <ListItemText style={{ fontWeight: 800 }} primary={item} />
                 </ListItem>
               )}
@@ -49,13 +54,36 @@ export const ChatClient = (props: Props) => {
                     paddingLeft: 44,
                     listStyleType: 'none',
                   }}>
-                    {props.chatRows.map((item, i) =>
-                      <li key={i} style={{ paddingBottom: 9 }}>{item}</li>
+                    {props.chatRows.map((item, i) => <li key={i} style={{ paddingBottom: 9 }}>{item}</li>
+                      
                     )}
                   </ul>
                 </Grid>
+                {props.isConnected && 
+                <Box
+                component="form"
+                sx={{
+                  '& .MuiTextField-root': { m: 1, width: '25ch' },
+                }}
+                noValidate
+                autoComplete="off"                  
+              >
+                <div style = {{width: 100}} >
+                  <TextField
+                    id="filled-textarea"
+                    label="Message"
+                    placeholder="Placeholder"
+                    multiline
+                    variant="filled"
+                    
+                    onKeyDown={(e)=> {e.keyCode === 13 ? props.onPublicMessage(e) : console.log(props.userName)}}
+                  />
+                 
+                </div>                  
+              </Box>}
+                
                 <Grid item style={{ margin: 10 }}>
-                  {props.isConnected && <Button style={{ marginRight: 7 }} variant="outlined" size="small" disableElevation onClick={props.onPublicMessage}>Send Public Message</Button>}
+                  
                   {props.isConnected && <Button variant="outlined" size="small" disableElevation onClick={props.onDisconnect}>Disconnect</Button>}
                   {!props.isConnected && <Button variant="outlined" size="small" disableElevation onClick={props.onConnect}>Connect</Button>}
                 </Grid>
