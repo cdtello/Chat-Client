@@ -5,8 +5,8 @@ import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <>
+    <App />
+    {/* <>
     <div>
       <p>
         <h1>¿Felicidad...?</h1>
@@ -42,7 +42,7 @@ ReactDOM.render(
         
       </p>
     </div>
-    </>
+    </> */}
   </React.StrictMode>,
   document.getElementById('root')
 )
