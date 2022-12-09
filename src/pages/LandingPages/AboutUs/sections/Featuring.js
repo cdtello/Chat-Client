@@ -60,8 +60,8 @@ function Featuring() {
             <DefaultCounterCard
               count={5234}
               separator=","
-              title="Projects"
-              description="Of “high-performing” level are led by a certified project manager"
+              title="Proyectos"
+              description="Desarrollados por estudiantes de la Universidad"
             />
           </Grid>
           <Grid item xs={12} md={3}>
@@ -69,16 +69,16 @@ function Featuring() {
               count={3400}
               separator=","
               suffix="+"
-              title="Hours"
-              description="That meets quality standards required by our users"
+              title="Horas"
+              description="Laboradas Voluntariamente para mejorar la situación del País"
             />
           </Grid>
           <Grid item xs={12} md={3}>
             <DefaultCounterCard
               count={24}
               suffix="/7"
-              title="Support"
-              description="Actively engage team members that finishes on time"
+              title="Soporte"
+              description="Las 24 Horas del dia, todos los dias tienes a disposición al mejor equipo de expertos"
             />
           </Grid>
         </Grid>

@@ -45,11 +45,10 @@ function Team() {
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              The Executive Team
+              Programas Academicos
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+              En esta seccion encontraras los programas academicos que ofrece nuestra prestigiosa Universidad.
             </MKTypography>
           </Grid>
         </Grid>
@@ -57,40 +56,40 @@ function Team() {
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team1}
-                name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
+                name="Ingenieria de Software"
+                position={{ color: "info", label: "Pregrado" }}
+                description="Este programa academico ha formado a los mejores desarrolladores de Google."
               />
             </MKBox>
           </Grid>
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team2}
-                name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
+                name="Ingenieria de Software"
+                position={{ color: "info", label: "Pregrado" }}
+                description="Este programa academico ha formado a los mejores desarrolladores de Google."
               />
             </MKBox>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <MKBox mb={{ xs: 1, lg: 0 }}>
+            <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team3}
-                name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
+                name="Ingenieria de Software"
+                position={{ color: "info", label: "Pregrado" }}
+                description="Este programa academico ha formado a los mejores desarrolladores de Google."
               />
             </MKBox>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <MKBox mb={{ xs: 1, lg: 0 }}>
+            <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team4}
-                name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
+                name="Ingenieria de Software"
+                position={{ color: "info", label: "Pregrado" }}
+                description="Este programa academico ha formado a los mejores desarrolladores de Google."
               />
             </MKBox>
           </Grid>

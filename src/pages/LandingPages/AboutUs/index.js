@@ -82,23 +82,23 @@ function AboutUs() {
               ¡Bienvenido a nuestra universidad! Estamos muy contentos de que hayas decidido visitar
               nuestra página web.
             </MKTypography>
-            <MKButton color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
+            <MKButton href="https://www.youtube.com/shorts/lP3K3xXIZ3s" color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
               Registrate
             </MKButton>
             <MKTypography variant="h6" color="white" mt={8} mb={1}>
               Encuentranos en
             </MKTypography>
             <MKBox display="flex" justifyContent="center" alignItems="center">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="white" href="https://www.youtube.com/shorts/lP3K3xXIZ3s" mr={3}>
                 <i className="fab fa-facebook" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="white" href="https://www.youtube.com/shorts/lP3K3xXIZ3s" mr={3}>
                 <i className="fab fa-instagram" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="white" href="https://www.youtube.com/shorts/lP3K3xXIZ3s" mr={3}>
                 <i className="fab fa-twitter" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#">
+              <MKTypography component="a" variant="body1" color="white" href="https://www.youtube.com/shorts/lP3K3xXIZ3s">
                 <i className="fab fa-google-plus" />
               </MKTypography>
             </MKBox>
@@ -117,7 +117,7 @@ function AboutUs() {
         <Information />
         <Team />
         <Featuring />
-        <Newsletter />
+        
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
