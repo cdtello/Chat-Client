@@ -38,7 +38,7 @@ const MKPagination = forwardRef(
       placementValue = "flex-start";
     } else if (placement === "center") {
       placementValue = "center";
-    }
+    } 
 
     return (
       <Context.Provider value={{ variant, color, size }}>
