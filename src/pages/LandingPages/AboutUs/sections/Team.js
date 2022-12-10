@@ -33,12 +33,20 @@ function Team() {
   useEffect(() => {
     // Realiza una solicitud GET a la API
     fetch('https://sejgle3754.execute-api.us-east-1.amazonaws.com/dev/testdb', {
+      //method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      //mode: 'no-cors', // no-cors, *cors, same-origin
+      //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      //credentials: 'same-origin', // include, *same-origin, omit
       headers: {
-        'Access-Control-Allow-Origin': '*'
+        'Content-Type': 'application/json',
+      // 'Content-Type': 'application/x-www-form-urlencoded',
       }
     })
       // Convierte la respuesta en formato JSON
-      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        return res.json()
+      })
       // Guarda los datos en el estado del componente
       .then(data => setData(data));
   }, []);
@@ -70,9 +78,10 @@ function Team() {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-        <ul>
+        
           {data.map(item => (
-            <><Grid item xs={12} lg={6}>
+            <>
+              <Grid item xs={12} lg={6}>
               <MKBox mb={1}>
                 <HorizontalTeamCard
                   image={item.image}
@@ -80,50 +89,10 @@ function Team() {
                   position={{ color: "info", label: "Pregrado" }}
                   description={item.nombreFacultad} />
               </MKBox>
-            </Grid><li key={item.id}>{item.name}</li></>
+              </Grid>
+            </>
           ))}
-        </ul>
-
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={1}>
-              <HorizontalTeamCard
-                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
-                name="Ingenieria de Software"
-                position={{ color: "info", label: "Pregrado" }}
-                description="Este programa academico ha formado a los mejores desarrolladores de Google."
-              />
-            </MKBox>
-          </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={1}>
-              <HorizontalTeamCard
-                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
-                name="Ingenieria de Software"
-                position={{ color: "info", label: "Pregrado" }}
-                description="Este programa academico ha formado a los mejores desarrolladores de Google."
-              />
-            </MKBox>
-          </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={1}>
-              <HorizontalTeamCard
-                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
-                name="Ingenieria de Software"
-                position={{ color: "info", label: "Pregrado" }}
-                description="Este programa academico ha formado a los mejores desarrolladores de Google."
-              />
-            </MKBox>
-          </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={1}>
-              <HorizontalTeamCard
-                image={"https://www.emagister.com.co/blog/wp-content/uploads/2020/02/ingenieros-de-software-kraken.jpg"}
-                name="Ingenieria de Software"
-                position={{ color: "info", label: "Pregrado" }}
-                description="Este programa academico ha formado a los mejores desarrolladores de Google."
-              />
-            </MKBox>
-          </Grid>
+        
         </Grid>
       </Container>
     </MKBox>
