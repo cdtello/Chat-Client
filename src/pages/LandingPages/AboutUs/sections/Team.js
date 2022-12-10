@@ -23,14 +23,31 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
-
-// Images
-import team1 from "assets/images/team-5.jpg";
-import team2 from "assets/images/bruce-mars.jpg";
-import team3 from "assets/images/ivana-squares.jpg";
-import team4 from "assets/images/ivana-square.jpg";
+import { useState, useEffect } from 'react';
 
 function Team() {
+  // Crea un estado que almacenará los datos recibidos de la API
+  const [data, setData] = useState(null);
+
+  // Realiza la solicitud GET a la API cuando se monta el componente
+  useEffect(() => {
+    // Realiza una solicitud GET a la API
+    fetch('https://sejgle3754.execute-api.us-east-1.amazonaws.com/dev/testdb', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
+      // Convierte la respuesta en formato JSON
+      .then(res => res.json())
+      // Guarda los datos en el estado del componente
+      .then(data => setData(data));
+  }, []);
+
+  if (!data) {
+    return <p>Cargando...</p>;
+  }
+
+
   return (
     <MKBox
       component="section"
@@ -53,6 +70,20 @@ function Team() {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
+        <ul>
+          {data.map(item => (
+            <><Grid item xs={12} lg={6}>
+              <MKBox mb={1}>
+                <HorizontalTeamCard
+                  image={item.image}
+                  name={item.nombrePrograma}
+                  position={{ color: "info", label: "Pregrado" }}
+                  description={item.nombreFacultad} />
+              </MKBox>
+            </Grid><li key={item.id}>{item.name}</li></>
+          ))}
+        </ul>
+
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard

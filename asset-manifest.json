@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.1c3f4584.chunk.js",
-    "main.js.map": "/static/js/main.1c3f4584.chunk.js.map",
+    "main.js": "/static/js/main.15f4c918.chunk.js",
+    "main.js.map": "/static/js/main.15f4c918.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c7357b76.js",
     "runtime-main.js.map": "/static/js/runtime-main.c7357b76.js.map",
     "static/js/2.a35c9c97.chunk.js": "/static/js/2.a35c9c97.chunk.js",
@@ -15,8 +15,6 @@
     "static/media/bruce-mars.8a606c4a.jpg": "/static/media/bruce-mars.8a606c4a.jpg",
     "static/media/city-profile.4d64bba9.jpg": "/static/media/city-profile.4d64bba9.jpg",
     "static/media/illustration-reset.c5f36c0c.jpg": "/static/media/illustration-reset.c5f36c0c.jpg",
-    "static/media/ivana-square.f7bc23b2.jpg": "/static/media/ivana-square.f7bc23b2.jpg",
-    "static/media/ivana-squares.3c555b85.jpg": "/static/media/ivana-squares.3c555b85.jpg",
     "static/media/logo-coinbase.87e91c7f.svg": "/static/media/logo-coinbase.87e91c7f.svg",
     "static/media/logo-nasa.c5d11f88.svg": "/static/media/logo-nasa.c5d11f88.svg",
     "static/media/logo-netflix.432ed6b5.svg": "/static/media/logo-netflix.432ed6b5.svg",
@@ -28,7 +26,6 @@
     "static/media/team-2.13ae2ce3.jpg": "/static/media/team-2.13ae2ce3.jpg",
     "static/media/team-3.0ef0be95.jpg": "/static/media/team-3.0ef0be95.jpg",
     "static/media/team-4.85c82b6e.jpg": "/static/media/team-4.85c82b6e.jpg",
-    "static/media/team-5.d59ab7b9.jpg": "/static/media/team-5.d59ab7b9.jpg",
     "static/media/testimonial-6-2.21f2048f.jpg": "/static/media/testimonial-6-2.21f2048f.jpg",
     "static/media/testimonial-6-3.d35bef0d.jpg": "/static/media/testimonial-6-3.d35bef0d.jpg",
     "static/media/universidad.4b8c7736.jpeg": "/static/media/universidad.4b8c7736.jpeg"
@@ -36,6 +33,6 @@
   "entrypoints": [
     "static/js/runtime-main.c7357b76.js",
     "static/js/2.a35c9c97.chunk.js",
-    "static/js/main.1c3f4584.chunk.js"
+    "static/js/main.15f4c918.chunk.js"
   ]
 }
